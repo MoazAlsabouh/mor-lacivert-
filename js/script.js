@@ -7,14 +7,13 @@ navBar.onclick = function() {
   sideBar.classList.toggle("nav-show");
   if (sideBar.classList.contains("nav-show") === true) {
     setTimeout(() => {
-      document.querySelector("main").style.display = "none";
-      document.querySelector("footer").style.display = "none";
-      document.querySelector(".iconh").style.display = "none";
+      document.querySelector("body").style.height = "150vh";
+      document.querySelector("body").style.overflow = "hidden";
+
     }, 500);
   } else {
-    document.querySelector("main").style.removeProperty("display");
-    document.querySelector("footer").style.removeProperty("display");
-    document.querySelector(".iconh").style.removeProperty("display");
+    document.querySelector("body").style.removeProperty("height");
+    document.querySelector("body").style.removeProperty("overflow");
   }
 };
 
