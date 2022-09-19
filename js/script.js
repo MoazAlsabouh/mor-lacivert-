@@ -33,14 +33,14 @@ function close(window) {
 
 let button = document.querySelectorAll(".open"),
   closes = document.querySelectorAll(".close");
-button.forEach(() => {
-  addEventListener("click", (el) => {
+button.forEach((section) => {
+  section.addEventListener("click", (el) => {
     open(`#${el.target.dataset.name}`);
   });
 });
 
-closes.forEach(() => {
-  addEventListener("click", (el) => {
+closes.forEach((section) => {
+  section.addEventListener("click", (el) => {
     close(`#${el.target.dataset.name}`);
   });
 });
