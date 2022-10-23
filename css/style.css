@@ -283,9 +283,9 @@ header nav ul li a:hover::before {
     font-size: 1.5em;
   }
 header .contenar .nav-hide {
-  position: relative;
-  top: 0;
-  left: 0;
+  position: fixed;
+  top: 100px;
+  right: 20px;
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -296,9 +296,9 @@ header .contenar .nav-show {
   background: rgb(51, 44, 44);
   width: 100vw;
   height: 150vh;
-  position: relative;
-  top: -110px;
-  left: -235px;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 header .contenar .nav-hide ul {
   display: none;

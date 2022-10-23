@@ -6,13 +6,9 @@ let navBar = document.querySelector("#icon"),
 navBar.onclick = function() {
   sideBar.classList.toggle("nav-show");
   if (sideBar.classList.contains("nav-show") === true) {
-    setTimeout(() => {
-      document.querySelector("body").style.height = "150vh";
-      document.querySelector("body").style.overflow = "hidden";
-    }, 500);
+    document.querySelector(".nav-show").style.cssText = "position: fixed; right: 0; top: 0;";
   } else {
-    document.querySelector("body").style.removeProperty("height");
-    document.querySelector("body").style.removeProperty("overflow");
+    sideBar.style.cssText = "position: fixed; right: 20px; top: 100px;";
   }
 };
 
@@ -132,7 +128,6 @@ window.onscroll = () => {
     haeder.style.cssText = `top: ${window.scrollY}px; background: #000000bf;`
     haederContenar.style.cssText = `border: none;`
     haederContact.style.cssText = `display: none;`
-
-    console.log (window.scrollY)
+    sideBar.style.cssText = "top: 45px;"
   }
 }
