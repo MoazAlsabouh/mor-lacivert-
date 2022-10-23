@@ -283,8 +283,8 @@ header nav ul li a:hover::before {
     font-size: 1.5em;
   }
 header .contenar .nav-hide {
-  position: relative;
-  top: 50px;
+  position: fixed;
+  top: 100px;
   right: 20px;
   transition: 0.5s;
   -webkit-transition: 0.5s;
