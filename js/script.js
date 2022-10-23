@@ -46,3 +46,67 @@ closes.forEach((section) => {
 });
 
 document.querySelector(".cy").textContent = new Date().getFullYear();
+
+// slider
+let sliderImage = document.querySelectorAll(".intro .slider img"),
+  sliderUl = document.querySelectorAll(".intro ul li"),
+  nextButton = document.querySelector(".intro .next"),
+  prevButton = document.querySelector(".intro .prev");
+
+let startSlider = 0;
+
+
+// next image
+function nextSlider() {
+  if (startSlider === 4) {
+    startSlider = 0
+    active(sliderImage, sliderUl);
+  } else {
+    startSlider++;
+    active(sliderImage, sliderUl);
+  }
+}
+
+//  prev image
+function prevSlider() {
+  if (startSlider === 0) {
+    startSlider = 4
+    active(sliderImage, sliderUl);
+  } else {
+    startSlider--;
+    active(sliderImage, sliderUl);
+  }
+}
+
+// click buton
+nextButton.onclick = () => {
+  nextSlider()
+}
+
+prevButton.onclick = () => {
+  prevSlider()
+}
+
+sliderUl.forEach((e) => {
+  e.addEventListener("click", (el) => {
+    startSlider = el.target.dataset.number
+    active(sliderImage, sliderUl)
+  })
+})
+
+
+// add active
+sliderImage[startSlider].classList = "active"
+sliderUl[startSlider].classList = "active"
+
+// remove and add active
+function active(array , ul) {
+  array.forEach(e => {
+    e.classList.remove("active");
+  })
+  ul.forEach(e => {
+    e.classList.remove("active");
+  })
+  array[startSlider].classList = "active";
+  ul[startSlider].classList = "active";
+}
