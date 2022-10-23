@@ -62,7 +62,11 @@ header {
   width: 100%;
   position: absolute;
   z-index: 999;
-  /* background: #0000004d; */
+  transition: background 1s;
+  -webkit-transition: background 1s;
+  -moz-transition: background 1s;
+  -ms-transition: background 1s;
+  -o-transition: background 1s;
 }
 
 .iconh {
@@ -100,6 +104,11 @@ header {
 header .contenar {
   padding: 30px 15px;
   border-bottom: 1px solid white;
+  transition: border 1s;
+  -webkit-transition: border 1s;
+  -moz-transition: border 1s;
+  -ms-transition: border 1s;
+  -o-transition: border 1s;
 }
 
 header .contenar .contact {
@@ -107,6 +116,11 @@ header .contenar .contact {
   justify-content: flex-end;
   flex-wrap: wrap;
   padding: 10px 0 0;
+  transition: display 1s;
+  -webkit-transition: display 1s;
+  -moz-transition: display 1s;
+  -ms-transition: display 1s;
+  -o-transition: display 1s;
 }
 
 header .contenar .contact a {
@@ -309,8 +323,6 @@ header .contenar .nav-show ul {
   width: 100vw;
   height: 130vh;
   position: relative;
-  /* animation: slider 30s linear infinite;
-  -webkit-animation: slider 30s linear infinite; */
 }
 
 .intro::before {
@@ -1103,81 +1115,3 @@ hr {
 .intro .slider img.active {
   opacity: 1;
 }
-/* start animation */
-@keyframes slider {
-  0% , 19% {
-    background: url(../images/intro-1.jpg) no-repeat;
-    background-size: cover;
-  }
-  20% , 39% {
-    background: url(../images/intro-2.jpg) no-repeat;
-    background-size: cover;
-  }
-  40% , 59% {
-    background: url(../images/intro-3.jpg) no-repeat;
-    background-size: cover;
-  }
-  60% , 79% {
-    background: url(../images/intro-4.jpg) no-repeat;
-    background-size: cover;
-  }
-  80% , 99% {
-    background: url(../images/intro-5.jpg) no-repeat;
-    background-size: cover;
-  }
-}
-
-@keyframes actone {
-  0% , 20% {
-    background: var(--main-color);
-  }
-  21% , 100% {
-    background: none;
-  }
-}
-
-@keyframes acttwo {
-  0%,19% {
-    background: none;
-  }
-  20%,40% {
-    background: var(--main-color);
-  }
-  41%,100% {
-    background: none;
-  }
-}
-
-@keyframes acttree {
-  0% , 39%{
-    background: none;
-  }
-  40% , 60%{
-    background: var(--main-color);
-  }
-  61% , 100% {
-    background: none;
-  }
-}
-
-@keyframes actfour {
-  0% , 59% {
-    background: none;
-  }
-  60% , 80% {
-    background: var(--main-color);
-  }
-  81% , 100% {
-    background: none;
-  }
-}
-
-@keyframes actfive {
-  0% , 79% {
-    background: none;
-  }
-  80% , 100% {
-    background: var(--main-color);
-  }
-}
-/* end */

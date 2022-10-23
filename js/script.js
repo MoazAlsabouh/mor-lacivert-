@@ -110,3 +110,29 @@ function active(array , ul) {
   array[startSlider].classList = "active";
   ul[startSlider].classList = "active";
 }
+
+let animation = setInterval(() => {
+  nextSlider()
+}, 7000);
+
+// haeder 
+
+let haeder = document.querySelector("header");
+let afterHaeder = document.querySelector(".intro + section");
+let haederContenar = document.querySelector("header .contenar");
+let haederContact = document.querySelector("header .contenar .contact");
+
+
+window.onscroll = () => {
+  haeder.style.cssText = `top: ${window.scrollY}px;`
+  haederContact.style.cssText = `display: flex;`
+  haederContenar.style.cssText = `border-bottom: 1px solid white;`
+
+  if (scrollY >= afterHaeder.offsetTop ) {
+    haeder.style.cssText = `top: ${window.scrollY}px; background: #000000bf;`
+    haederContenar.style.cssText = `border: none;`
+    haederContact.style.cssText = `display: none;`
+
+    console.log (window.scrollY)
+  }
+}
